@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.qaagility.javaee</groupId>
-	<artifactId>PerfTest</artifactId>
+	<artifactId>test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>JunitTesting</name>
+	<name>test</name>
 	<description>Learn Java JSP and Servlet</description>
 	<dependencies>
 		<!-- Unit Test -->
@@ -13,13 +13,9 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+		
 		</dependency>
-		<dependency>
-			<groupId>com.perf</groupId>
-			<artifactId>perf</artifactId>
-			<version>1.0</version>
-	</dependency>
-		<dependency>
+			<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
@@ -34,7 +30,8 @@
 	</dependencies>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		
+<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -58,25 +55,12 @@
 			        <groupId>org.apache.maven.plugins</groupId>
 			        <artifactId>maven-surefire-plugin</artifactId>
         			<version>2.22.0</version>
- <executions>
-          <execution>
-			<id>Performance-Tests</id>
-            	<phase>Performance-Test</phase>
-           	 <goals>
-             		 <goal>test</goal>
-           	 </goals>
-            <configuration>
-              <includes>
-			<include>**/*PerfTest.java</include>
-			</includes>
-            </configuration>
-          </execution>
-        </executions>
-        			<configuration>
-          				<parallel>methods</parallel>
-          				<threadCount>10</threadCount>
-        			</configuration>
-			</plugin>				
+<configuration>
+                <includes>
+                        <include>*.java</include>
+                </includes>
+        </configuration>
+         					</plugin>				
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>

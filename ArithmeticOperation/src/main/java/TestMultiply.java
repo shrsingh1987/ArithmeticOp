@@ -5,6 +5,7 @@ package test;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
+import junit.framework.TestCase;
 import test.ArithmeticOperation;
 
 public class TestMultiply {
@@ -12,13 +13,13 @@ public class TestMultiply {
 	 ArithmeticOperation op = new ArithmeticOperation();
 	 ArithmeticOperation op1 = new ArithmeticOperation();
 	 long l = 2000;
-	 TestMultiply testing;
+	 static TestMultiply testing;
 	
 	 
 	public static void main(String[] args) throws InterruptedException 
 	{
 		
-		
+		testing.multiply();
 	}
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
@@ -33,12 +34,9 @@ public class TestMultiply {
 		op1 = op.multiply(a,b);
 		long l2 = System.currentTimeMillis();
 		long l3=l2-l1;
-		if ( l3 > l )
-		{
-			Assert.fail();
-		}
-			
-		//System.out.println("Test Passed as it took"+l3+ " secs");
+		Assert.assertTrue("Test Passed as it took"+l3+ " secs",l3<l);
+		System.out.println("Test Passed as it took"+l3+ " secs");
+		
 	}
 }
 

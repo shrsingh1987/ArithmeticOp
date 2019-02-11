@@ -16,7 +16,7 @@ int val;
 	}
 	public ArithmeticOperation multiply(int a, int b) throws InterruptedException
 	{
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		this.val = a*b;
 		return this;
 	}
