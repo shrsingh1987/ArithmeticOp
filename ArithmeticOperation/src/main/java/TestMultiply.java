@@ -1,12 +1,13 @@
-package test;
+package main.java;
+
 
 //import static org.junit.Assert.*;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Test;
-import junit.framework.TestCase;
-import test.ArithmeticOperation;
+
+import main.java.ArithmeticOperation;
 
 public class TestMultiply {
 	
@@ -19,14 +20,15 @@ public class TestMultiply {
 	public static void main(String[] args) throws InterruptedException 
 	{
 		
-		testing.multiply();
+		testing.multiplication();
+	
 	}
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 	}
 
 	@Test
-	public void multiply() throws InterruptedException {
+	public void multiplication() throws InterruptedException {
 		//Thread.sleep(10500);
 		int a = 30;
 		int b = 10;

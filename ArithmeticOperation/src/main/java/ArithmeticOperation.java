@@ -1,11 +1,11 @@
-
-package test;
+package main.java;
 
 
 public class ArithmeticOperation  {
 int val;
-	public ArithmeticOperation add(int a,int b)
+	public ArithmeticOperation add(int a,int b) throws InterruptedException
 	{
+		Thread.sleep(1000);
 		this.val = a+b;
 		return this;
 	}
@@ -16,7 +16,7 @@ int val;
 	}
 	public ArithmeticOperation multiply(int a, int b) throws InterruptedException
 	{
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		this.val = a*b;
 		return this;
 	}

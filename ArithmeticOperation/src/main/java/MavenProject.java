@@ -1,4 +1,6 @@
-package test;
+package main.java;
+
+
 
 public class MavenProject {
 
