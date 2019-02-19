@@ -11,7 +11,7 @@ public class TestMultiply {
 	
 	 ArithmeticOperation op = new ArithmeticOperation();
 	 ArithmeticOperation op1 = new ArithmeticOperation();
-	 long l = 2000;
+	 long l = 1500;
 	 TestMultiply testing;
 	
 	 
